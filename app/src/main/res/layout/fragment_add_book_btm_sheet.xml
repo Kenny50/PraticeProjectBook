@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/add_new_data_prompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/price_enter_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="price"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/add_new_data_prompt" />
+
+        <EditText
+            android:id="@+id/title_enter_prompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="title"
+            app:layout_constraintTop_toBottomOf="@id/price_enter_box" />
+
+        <Button
+            android:id="@+id/bottom_sheet_sent_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/bottom_sheet_cancel_button"
+            app:layout_constraintTop_toBottomOf="@id/title_enter_prompt" />
+
+        <Button
+            android:id="@+id/bottom_sheet_cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cancel"
+            app:layout_constraintEnd_toStartOf="@+id/bottom_sheet_sent_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bottom_sheet_sent_button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
